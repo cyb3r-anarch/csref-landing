@@ -14,10 +14,10 @@ function App() {
 
   return (
     <>
-    <Navbar onThemeChange={themeChange}/>
+    <Navbar curTheme={theme} onThemeChange={themeChange}/>
     {theme=="student" && <h1>Student</h1>}
     {theme=="engineer" && <h1>Engineer</h1>}
-    <MainText />
+    <MainText curTheme={theme}/>
     <Card />
     </>
   )
