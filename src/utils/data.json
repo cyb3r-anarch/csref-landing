@@ -20,7 +20,8 @@
             "icon": "feature3-icon-student.png",
             "description": "Description for feature 3 for students."
         }
-        ]
+        ],
+        "waitlistModalText": "Sign up early and get 10 free referral requests!"
     },
     "engineers": {
         "mainText": {
@@ -43,6 +44,7 @@
             "icon": "feature3-icon-engineer.png",
             "description": "Description for feature 3 for engineers."
         }
-        ]
+        ],
+        "waitlistModalText": "Sign up early to be featured as a referrer!"
     }
 }  
