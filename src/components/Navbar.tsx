@@ -9,12 +9,13 @@ interface NavbarProps {
 
 function Navbar({ onThemeChange }: NavbarProps) {
   return (
-    <ul>
-      <img src={logo} alt="logo" />
-      <ThemeSwitch onThemeChange={onThemeChange}/>
+    <nav className="flex items-center justify-between p-4 bg-blue-500 text-white">
+        <img className="h-8" src={logo} alt="logo" />
+        <ThemeSwitch onThemeChange={onThemeChange} />
       <WaitlistBtn />
-    </ul>
-  )
+    </nav>
+  );
 }
+
 
 export default Navbar

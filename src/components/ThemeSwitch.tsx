@@ -6,7 +6,7 @@ interface ThemeSwitchProps {
 
 export default function ThemeSwitch({onThemeChange}: ThemeSwitchProps) {
   return (
-    <div>
+    <div className='flex gap-x-4'>
       <p>For Students</p>
       <button onClick={onThemeChange}>Change Theme</button>
       <p>For Engineers</p>
