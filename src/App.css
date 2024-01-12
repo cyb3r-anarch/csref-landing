@@ -3,6 +3,8 @@
 body{
   min-height:100vh;
   font-family: 'raleway';
+  background: rgb(246,245,255);
+  background: linear-gradient(179deg, rgba(246,245,255,1) 10%, rgba(226,247,255,1) 100%); 
 }
 
 
