@@ -5,14 +5,15 @@ import WaitlistBtn from './WaitlistBtn';
 
 interface NavbarProps {
   onThemeChange: () => void;
+  curTheme: string;
 }
 
-function Navbar({ onThemeChange }: NavbarProps) {
+function Navbar({ onThemeChange, curTheme }: NavbarProps) {
   return (
     <nav className="flex items-center justify-between p-4 text-white">
         <img className="h-8" src={logo} alt="logo" />
         <ThemeSwitch onThemeChange={onThemeChange} />
-      <WaitlistBtn />
+      <WaitlistBtn curTheme={curTheme}/>
     </nav>
   );
 }
