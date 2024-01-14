@@ -10,7 +10,7 @@ interface NavbarProps {
 
 function Navbar({ onThemeChange, curTheme }: NavbarProps) {
   return (
-    <nav className="flex items-center justify-between p-4 text-white">
+    <nav className="flex items-center justify-between px-32 py-8 text-white">
         <img className="h-8" src={logo} alt="logo" />
         <ThemeSwitch curTheme={curTheme} onThemeChange={onThemeChange} />
       <WaitlistBtn text="Join the waitlist" curTheme={curTheme}/>
