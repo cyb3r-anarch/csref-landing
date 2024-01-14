@@ -7,7 +7,7 @@ interface ThemeSwitchToggleProps {
 
 function ThemeSwitchToggle({ onClick, curTheme }: ThemeSwitchToggleProps) {
   return (
-    <div className="flex items-center justify-center w-full ml-24">
+    <div className="flex items-center justify-center w-full ml-28">
       <p className='mx-4'>For Students</p>
       <label htmlFor="toggle" className="flex items-center cursor-pointer">
         <div className="relative">
