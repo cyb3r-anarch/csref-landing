@@ -13,7 +13,7 @@ function Navbar({ onThemeChange, curTheme }: NavbarProps) {
     <nav className="flex items-center justify-between p-4 text-white">
         <img className="h-8" src={logo} alt="logo" />
         <ThemeSwitch curTheme={curTheme} onThemeChange={onThemeChange} />
-      <WaitlistBtn curTheme={curTheme}/>
+      <WaitlistBtn text="Join the waitlist" curTheme={curTheme}/>
     </nav>
   );
 }
