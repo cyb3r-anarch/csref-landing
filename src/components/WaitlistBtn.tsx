@@ -4,9 +4,10 @@ import WaitlistModal from './WaitlistModal';
 
 interface WaitlistBtnProps {
   curTheme: string;
+  text: string;
 }
 
-function WaitlistBtn({ curTheme }: WaitlistBtnProps) {
+function WaitlistBtn({ curTheme , text }: WaitlistBtnProps) {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -21,8 +22,8 @@ function WaitlistBtn({ curTheme }: WaitlistBtnProps) {
 
   return (
     <>
-      <button onClick={openModal} className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
-        Join Waitlist
+      <button onClick={openModal} className="bg-purple-500 hover:bg-purple-700 text-white py-2 px-4 rounded-lg">
+      {text}
       </button>
       {showModal && createPortal(
         <WaitlistModal onClose={() => setShowModal(false)} curTheme={curTheme} />,
