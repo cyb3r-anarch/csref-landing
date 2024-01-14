@@ -7,6 +7,7 @@ interface WaitlistBtnProps {
   text: string;
 }
 
+
 function WaitlistBtn({ curTheme , text }: WaitlistBtnProps) {
   const [showModal, setShowModal] = useState(false);
 
