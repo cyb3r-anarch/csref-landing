@@ -30,7 +30,7 @@ function WaitlistModal({ curTheme, onClose }: WaitlistModalProps ) {
   
     return (
         <div>
-            <form onSubmit={onSubmit}>
+            <form className='modal' onSubmit={onSubmit}>
                 <label>{text}</label><input name="email" type="email" required onChange={(e) => setEmail(e.target.value)}/>
                 <button type='submit'>Sign Up</button>
                 <button onClick={onClose}>Close</button>
