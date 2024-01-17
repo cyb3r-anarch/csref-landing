@@ -1,5 +1,6 @@
 import React, {FormEvent, useState} from 'react'
 import data from '../utils/data.json'
+import './Popup.css'; // Import your CSS file for styling
 
 interface WaitlistModalProps {
     curTheme: string;
@@ -29,14 +30,37 @@ function WaitlistModal({ curTheme, onClose }: WaitlistModalProps ) {
     }
   
     return (
-        <div>
-            <form className='modal' onSubmit={onSubmit}>
-                <label>{text}</label><input name="email" type="email" required onChange={(e) => setEmail(e.target.value)}/>
-                <button type='submit'>Sign Up</button>
-                <button onClick={onClose}>Close</button>
-            </form>
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        <div className="bg-gray-800 bg-opacity-50 w-full h-full absolute z-10"></div>
+        <div className="bg-white p-6 rounded shadow-md z-20 flex flex-col">
+          <form onSubmit={onSubmit}>
+            <label className="text-lg">{text}</label>
+            <input
+              className="block w-full mt-2 p-2 border border-gray-300 rounded"
+              name="email"
+              placeholder='Email...'
+              type="email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <div className="mt-4 flex justify-center">
+              <button
+                type="submit"
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              >
+                Sign Up
+              </button>
+              <button
+                onClick={onClose}
+                className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+              >
+                Close
+              </button>
+            </div>
+          </form>
         </div>
-    );
+      </div>
+      );
 }
 
 export default WaitlistModal
