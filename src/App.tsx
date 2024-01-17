@@ -18,7 +18,11 @@ function App() {
     {theme=="student" && <h1>Student</h1>}
     {theme=="engineer" && <h1>Engineer</h1>}
     <MainText curTheme={theme}/>
-    <Card />
+    <div className="w-full flex justify-around ">
+      <Card title="tehee" description='teeheeeee' />
+      <Card title="tehee" description='teeheeeee' />
+      <Card title="tehee" description='teeheeeee' />
+    </div>
     </>
   )
 }
