@@ -4,4 +4,6 @@
 
 body, #root{
     min-height:100vh;
+    background-color:#020917 ;
+    color:white;
 }
