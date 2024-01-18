@@ -1,54 +1,50 @@
-[
-    {
-        "student": {
-            "mainText": {
-                "header": "Student Main Text Header",
-                "description": "Description for students' main text."
+[{
+    "student": {
+        "mainText": {
+            "header": "Secure Your Tech Internship",
+            "description": "Step into the world of tech internships with ease. Our platform connects you with industry engineers ready to refer you, skyrocketing your chances to land that dream internship!"
+        },
+        "features": [
+            {
+                "title": "Personalized Referrals",
+                "icon": "feature1-icon-student.png",
+                "description": "Get referred by experienced engineers, tailored to your skills and interests, giving you a significant edge in the competitive internship market."
             },
-            "features": [
-                {
-                    "title": "Feature 1 Title for Students",
-                    "icon": "feature1-icon-student.png",
-                    "description": "Description for feature 1 for students."
-                },
-                {
-                    "title": "Feature 2 Title for Students",
-                    "icon": "feature2-icon-student.png",
-                    "description": "Description for feature 2 for students."
-                },
-                {
-                    "title": "Feature 3 Title for Students",
-                    "icon": "feature3-icon-student.png",
-                    "description": "Description for feature 3 for students."
-                }
-            ],
-            "waitlistModalText": "Sign up early and get 10 free referral requests!"
-        }
+            {
+                "title": "Insider Industry Insights",
+                "icon": "feature2-icon-student.png",
+                "description": "Gain exclusive insights into the tech world from engineers. Learn what companies seek in interns and how to stand out."
+            },
+            {
+                "title": "Build Your Professional Network",
+                "icon": "feature3-icon-student.png",
+                "description": "Expand your professional network by connecting with tech experts, opening doors to future opportunities and industry knowledge."
+            }
+        ],
+        "waitlistModalText": "Join our waitlist now! Early sign-ups receive 10 complimentary referral requests to kickstart your internship journey."
     },
-    {
-        "engineer": {
-            "mainText": {
-                "header": "Engineer Main Text Header",
-                "description": "Description for engineers' main text."
+    "engineer": {
+        "mainText": {
+            "header": "Empower the Next Tech Generation",
+            "description": "Leverage your experience to guide aspiring tech interns. Your referrals can shape careers and bring fresh talent to your team."
+        },
+        "features": [
+            {
+                "title": "Mentor Future Tech Stars",
+                "icon": "feature1-icon-engineer.png",
+                "description": "Play a pivotal role in a student's career by offering referrals and mentorship, and witness their growth in the tech world."
             },
-            "features": [
-                {
-                    "title": "Feature 1 Title for Engineers",
-                    "icon": "feature1-icon-engineer.png",
-                    "description": "Description for feature 1 for engineers."
-                },
-                {
-                    "title": "Feature 2 Title for Engineers",
-                    "icon": "feature2-icon-engineer.png",
-                    "description": "Description for feature 2 for engineers."
-                },
-                {
-                    "title": "Feature 3 Title for Engineers",
-                    "icon": "feature3-icon-engineer.png",
-                    "description": "Description for feature 3 for engineers."
-                }
-            ],
-            "waitlistModalText": "Sign up early to be featured as a referrer!"
-        }
+            {
+                "title": "Targeted Job Referrals",
+                "icon": "feature2-icon-engineer.png",
+                "description": "Directly refer candidates for specific job postings at your company, matching interns with the perfect roles to suit their skills."
+            },
+            {
+                "title": "Expand Your Professional Impact",
+                "icon": "feature3-icon-engineer.png",
+                "description": "Strengthen your professional network and industry reputation by connecting with and supporting emerging tech talent."
+            }
+        ],
+        "waitlistModalText": "Engineers, sign up early! Be among the first referrers and get featured on our platform, amplifying your impact in the tech community."
     }
-]
+}]
