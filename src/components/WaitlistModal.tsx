@@ -32,7 +32,7 @@ function WaitlistModal({ curTheme, onClose }: WaitlistModalProps ) {
     return (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
         <div className="bg-gray-800 bg-opacity-50 w-full h-full absolute z-10"></div>
-        <div className="bg-white p-6 rounded shadow-md z-20 flex flex-col">
+        <div className="bg-sky-950 p-6 rounded shadow-md z-20 flex flex-col">
           <form onSubmit={onSubmit}>
             <label className="text-lg">{text}</label>
             <input

@@ -8,7 +8,7 @@ interface ThemeSwitchProps {
 
 export default function ThemeSwitch({onThemeChange, curTheme}: ThemeSwitchProps) {
   return (
-    <div className='flex gap-x-4 text-cyan-950'>
+    <div className='flex gap-x-4 text-white'>
       <ThemeSwitchToggle curTheme={curTheme} onClick={onThemeChange}/>
     </div>
   )
