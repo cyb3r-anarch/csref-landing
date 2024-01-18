@@ -18,7 +18,7 @@ export default function MainText({ curTheme }: MainTextProps) {
         <div className=' h-96 mt-32 ml-auto mb-16 mr-auto sm:container text-center px-96 gap-y-8 flex flex-col '>
           <h1 className='font-bold text-7xl scale-up-bottom'>{studentMainText.header}</h1>
           <p className='text-lg text-slate-300 scale-up-bottom'>{studentMainText.description}</p>
-          <div className="min-w-8 ml-auto mr-auto font-light text-3xl">
+          <div className="min-w-8 ml-auto mr-auto text-2xl">
             <WaitlistBtn text="Get Started" curTheme={curTheme}/>
           </div>
         </div>
@@ -27,7 +27,7 @@ export default function MainText({ curTheme }: MainTextProps) {
         <div className=' h-96 mt-32 ml-auto mb-16 mr-auto sm:container text-center px-96 gap-y-8 flex flex-col '>
           <h1 className='font-bold text-7xl scale-up-bottom'>{engineerMainText.header}</h1>
           <p className='text-lg text-slate-300 scale-up-bottom'>{engineerMainText.description}</p>
-          <div className="min-w-8 ml-auto mr-auto font-light text-3xl">
+          <div className="min-w-8 ml-auto mr-auto font-light text-2xl">
             <WaitlistBtn text="Get Started" curTheme={curTheme}/>
           </div>
         </div>
