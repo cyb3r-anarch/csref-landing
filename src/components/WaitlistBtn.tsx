@@ -21,13 +21,22 @@ function WaitlistBtn({ curTheme , text }: WaitlistBtnProps) {
     // Otherwise, do nothing (optional: show a message, log, etc.)
   };
 
+  const closeSignUpModal = () => {
+    const modal = document.getElementsByClassName('slit-in-vertical')[0]
+    modal.classList.remove('slit-in-vertical')
+    modal.classList.add('slit-out-vertical')
+    setTimeout(() => {
+      setShowModal(false);
+    }, 600)
+  }
+
   return (
     <>
       <button onClick={openModal} className="bg-sky-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-sm scale-up-bottom pulsate-fwd">
       {text}
       </button>
       {showModal && createPortal(
-        <WaitlistModal onClose={() => setShowModal(false)} curTheme={curTheme} />,
+        <WaitlistModal onClose={() => closeSignUpModal()} curTheme={curTheme} />,
         document.body
       )}
     </>
