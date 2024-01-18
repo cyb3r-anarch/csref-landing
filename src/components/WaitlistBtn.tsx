@@ -23,7 +23,7 @@ function WaitlistBtn({ curTheme , text }: WaitlistBtnProps) {
 
   return (
     <>
-      <button onClick={openModal} className="bg-sky-600 hover:bg-cyan-700 text-white font-bold text-xl py-2 px-4 rounded-sm">
+      <button onClick={openModal} className="bg-sky-600 hover:bg-cyan-700 text-white font-bold text-xl py-2 px-4 rounded-sm scale-up-bottom pulsate-fwd">
       {text}
       </button>
       {showModal && createPortal(
