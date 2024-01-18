@@ -21,7 +21,7 @@
                 "description": "Expand your professional network by connecting with tech experts, opening doors to future opportunities and industry knowledge."
             }
         ],
-        "waitlistModalText": "Join our waitlist now! Early sign-ups receive 10 complimentary referral requests to kickstart your internship journey."
+        "waitlistModalText": "<b>Join our waitlist for exclusive benefits!</b><br>Early sign-ups get 10 complimentary referral requests to jumpstart your internship journey."
     },
     "engineer": {
         "mainText": {
