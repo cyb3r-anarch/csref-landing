@@ -30,37 +30,44 @@ function WaitlistModal({ curTheme, onClose }: WaitlistModalProps ) {
     }
   
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
         <div className="bg-gray-800 bg-opacity-50 w-full h-full absolute z-10"></div>
-        <div className="bg-sky-950 p-6 rounded shadow-md z-20 flex flex-col">
-          <form onSubmit={onSubmit}>
-            <label className="text-lg">{text}</label>
+        <div className="bg-sky-950 p-6 rounded max-w-96 shadow-md z-20 flex flex-col border-2 border-slate-500 relative">
+          <button
+            onClick={onClose}
+            className="absolute top-1 right-3 text-white text-xl cursor-pointer focus:outline-none"
+          >
+            &times;
+          </button>
+          <form onSubmit={onSubmit} className="space-y-4">
+            <h2
+              className="text-md text-center mb-4 leading-10" 
+              dangerouslySetInnerHTML={{ __html: text }}
+            ></h2>
+    
+            {/* <label className="block text-sm font-medium text-gray-300">Email</label> */}
             <input
-              className="block w-full mt-2 p-2 border border-gray-300 rounded"
+              className="block w-full text-center text-black mt-2 p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
               name="email"
-              placeholder='Email...'
+              placeholder="Enter your email"
               type="email"
               required
               onChange={(e) => setEmail(e.target.value)}
             />
-            <div className="mt-4 flex justify-center">
+    
+            <div className="flex justify-center space-x-2 w-full">
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="mt-2 px-4 py-2 bg-blue-500 font-bold text-white rounded hover:bg-blue-600 w-full focus:outline-none focus:ring focus:border-blue-300"
               >
                 Sign Up
-              </button>
-              <button
-                onClick={onClose}
-                className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
-              >
-                Close
               </button>
             </div>
           </form>
         </div>
       </div>
-      );
+    );
+    
 }
 
 export default WaitlistModal
