@@ -40,8 +40,6 @@ function App() {
     return (
         <>
             <Navbar curTheme={theme} onThemeChange={themeChange} />
-            {theme == "student" && <h1>Student</h1>}
-            {theme == "engineer" && <h1>Engineer</h1>}
             <MainText curTheme={theme} />
             {theme === "student" && (
                 <div className="w-full flex justify-around ">
