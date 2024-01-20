@@ -32,13 +32,14 @@ function WaitlistBtn({ curTheme, text, isSignedUp, onSignUp }: WaitlistBtnProps)
         }, 600);
     };
 
+    // changes button background color
+    const bgColor = curTheme==="student" ? "bg-sky-600" : "bg-green-500";
+    const bgHover = curTheme==="student" ? "hover:bg-cyan-500" : "hover:bg-green-400";
+
     return (
         <>
             {!isSignedUp ? (
-                <button
-                    onClick={openModal}
-                    className="bg-sky-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-sm scale-up-bottom pulsate-fwd"
-                >
+                <button onClick={openModal} className={`text-white font-bold py-2 px-4 rounded-sm scale-up-bottom pulsate-fwd ${bgColor} ${bgHover}`}>
                     {text}
                 </button>
             ) : (
@@ -47,15 +48,9 @@ function WaitlistBtn({ curTheme, text, isSignedUp, onSignUp }: WaitlistBtnProps)
                     <img className="size-5" src={checkMark} alt="checkmark"/>
                 </div>
             )}
-            {showModal &&
-                createPortal(
-                    <WaitlistModal
-                        onSignUp={onSignUp}
-                        onClose={() => closeSignUpModal()}
-                        curTheme={curTheme}
-                    />,
-                    document.body
-                )}
+            {showModal && createPortal(
+                <WaitlistModal onSignUp={onSignUp} onClose={() => closeSignUpModal()} curTheme={curTheme}/>, document.body
+            )}
         </>
     );
 }
