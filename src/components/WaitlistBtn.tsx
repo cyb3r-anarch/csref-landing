@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import WaitlistModal from "./WaitlistModal";
+import checkMark from "../assets/checkMark.png"
 
 interface WaitlistBtnProps {
     curTheme: string;
@@ -41,7 +42,10 @@ function WaitlistBtn({ curTheme, text, isSignedUp, onSignUp }: WaitlistBtnProps)
                     {text}
                 </button>
             ) : (
-                <p>Thank you for signing up!</p>
+                <div className="flex flex-row items-center gap-x-2">
+                    <p>Thanks for signing up!</p>
+                    <img className="size-5" src={checkMark} alt="checkmark"/>
+                </div>
             )}
             {showModal &&
                 createPortal(
