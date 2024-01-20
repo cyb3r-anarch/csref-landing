@@ -6,9 +6,11 @@ import WaitlistBtn from './WaitlistBtn';
 interface NavbarProps {
   onThemeChange: () => void;
   curTheme: string;
+  isSignedUp: boolean;
+  onSignUp: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onThemeChange, curTheme }) => {
+const Navbar: React.FC<NavbarProps> = ({ onThemeChange, curTheme, isSignedUp, onSignUp }) => {
   return (
     <nav
       className="flex items-center justify-between px-32 py-8 text-white scale-up-top"
@@ -19,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeChange, curTheme }) => {
         alt="logo"
       />
       <ThemeSwitch curTheme={curTheme} onThemeChange={onThemeChange} />
-      <WaitlistBtn text="Join the waitlist" curTheme={curTheme} />
+      <WaitlistBtn isSignedUp={isSignedUp} onSignUp={onSignUp} text="Join the waitlist" curTheme={curTheme} />
     </nav>
   );
 };
