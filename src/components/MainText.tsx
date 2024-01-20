@@ -20,9 +20,9 @@ export default function MainText({ curTheme, isSignedUp, onSignUp }: MainTextPro
   const description = curTheme==="student" ? studentMainText.description : engineerMainText.description;
   return (
     <>        
-      <div className=' h-96 mt-32 ml-auto mb-16 mr-auto sm:container text-center px-96 gap-y-8 flex flex-col '>
-        <h1 className='font-bold text-7xl scale-up-bottom'>{mainText}</h1>
-        <p className='text-lg text-slate-300 scale-up-bottom'>{description}</p>
+      <div className=' h-96 mt-32 ml-auto mb-16 mr-auto sm:container text-center px-96 gap-y-8 flex flex-col scale-up-bottom'>
+        <h1 className='font-bold text-7xl'>{mainText}</h1>
+        <p className='text-lg text-slate-300'>{description}</p>
         <div className="min-w-8 ml-auto mr-auto text-2xl">
           <WaitlistBtn isSignedUp={isSignedUp} onSignUp={onSignUp} text="Get Started" curTheme={curTheme}/>
         </div>
