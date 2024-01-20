@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import MainText from "./components/MainText";
 import Card from "./components/Card";
 import data from "./utils/data.json";
+import Confetti from "react-confetti";
 
 function App() {
     const [theme, setTheme] = useState("student");
@@ -48,7 +49,8 @@ function App() {
 
 
     return (
-        <>
+        <div id="app">
+            {isSignedUp && <Confetti/>}
             <Navbar isSignedUp={isSignedUp} onSignUp={onSignUp} curTheme={theme} onThemeChange={themeChange} />
             <MainText isSignedUp={isSignedUp} onSignUp={onSignUp} curTheme={theme} />
             {theme === "student" && (
@@ -83,7 +85,7 @@ function App() {
                     />
                 </div>
             )}
-        </>
+        </div>
     );
 }
 
