@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import MainText from "./components/MainText";
@@ -7,6 +7,16 @@ import data from "./utils/data.json";
 
 function App() {
     const [theme, setTheme] = useState("student");
+    const [isSignedUp, setIsSignedUp] = useState(false);
+
+    const onSignUp = () => {
+        localStorage.setItem("signedUp", "true");
+        setIsSignedUp(true);
+    };
+    useEffect(() => {
+        const signedUp = localStorage.getItem("signedUp") === "true";
+        setIsSignedUp(signedUp);
+    }, []);
 
     const themeChange = () => {
         setTheme(theme === "student" ? "engineer" : "student");
@@ -39,8 +49,8 @@ function App() {
 
     return (
         <>
-            <Navbar curTheme={theme} onThemeChange={themeChange} />
-            <MainText curTheme={theme} />
+            <Navbar isSignedUp={isSignedUp} onSignUp={onSignUp} curTheme={theme} onThemeChange={themeChange} />
+            <MainText isSignedUp={isSignedUp} onSignUp={onSignUp} curTheme={theme} />
             {theme === "student" && (
                 <div className="w-full flex justify-around ">
                     <Card
