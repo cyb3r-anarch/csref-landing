@@ -33,8 +33,8 @@ function WaitlistBtn({ curTheme, text, isSignedUp, onSignUp }: WaitlistBtnProps)
     };
 
     // changes button background color
-    const bgColor = curTheme==="student" ? "bg-sky-600" : "bg-green-500";
-    const bgHover = curTheme==="student" ? "hover:bg-cyan-500" : "hover:bg-green-400";
+    const bgColor = curTheme==="engineer" ? "bg-sky-600" : "bg-green-500";
+    const bgHover = curTheme==="engineer" ? "hover:bg-cyan-500" : "hover:bg-green-400";
 
     return (
         <>
