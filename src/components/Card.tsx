@@ -20,7 +20,7 @@ function Card(this: any, { curTheme, itemKey }: CardProps) {
 
   return (
   <>
-    <div className={"flex w-96 gap-x-5  px-6 py-3 border rounded-lg shadow-md bg-blue-400/10 scale-up-bottom"}>
+    <div className={"flex w-96 gap-x-5  px-6 py-3 border rounded-lg shadow-md bg-blue-400/10 scale-up-bottom fade-in"}>
       <img style={{ maxHeight: "48px" }} src={icon} alt=""/>
       <div className="flex flex-col">
         <h3 className="font-bold text-lg">{curTheme==="student" ? studentTitle : engineerTitle}</h3>

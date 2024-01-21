@@ -39,7 +39,7 @@ function WaitlistBtn({ curTheme, text, isSignedUp, onSignUp }: WaitlistBtnProps)
     return (
         <>
             {!isSignedUp ? (
-                <button onClick={openModal} className={`text-white font-bold py-2 px-4 rounded-sm scale-up-bottom pulsate-fwd ${bgColor} ${bgHover}`}>
+                <button onClick={openModal} className={`text-white font-bold py-2 px-4 rounded-sm fade-in ${bgColor} ${bgHover}`}>
                     {text}
                 </button>
             ) : (

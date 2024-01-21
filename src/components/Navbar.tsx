@@ -13,7 +13,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ onThemeChange, curTheme, isSignedUp, onSignUp }) => {
   return (
     <nav
-      className="flex items-center justify-between px-32 py-8 text-white scale-up-top"
+      className="flex items-center justify-between px-32 py-8 text-white fade-in"
     >
       <img
         className="h-8"
