@@ -35,8 +35,8 @@ function WaitlistModal({ curTheme, onClose, onSignUp }: WaitlistModalProps) {
 
     return (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-            <div className="bg-gray-800 bg-opacity-50 w-full h-full absolute z-10"></div>
-            <div className="bg-sky-950 p-6 rounded max-w-96 shadow-md z-20 flex flex-col border-2 border-slate-500 relative slit-in-vertical">
+            <div style={{backgroundColor: "rgba(2, 9, 23, 0.95)"}} className="w-full h-full absolute z-10"></div>
+            <div className={`bg-slate-800 p-6 rounded max-w-96 shadow-md z-20 flex flex-col border-2 border-slate-500 relative slit-in-vertical`}>
                 <button
                     onClick={onClose}
                     className="absolute top-1 right-3 text-white text-xl cursor-pointer focus:outline-none"
