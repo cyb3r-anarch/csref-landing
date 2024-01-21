@@ -1,16 +1,20 @@
-import React from 'react'
-import icon from '../assets/icon.png'
-import data from '../utils/data.json'
+import React from "react";
+import icon from "../assets/icon.png";
+import data from "../utils/data.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-interface CardProps{
+interface CardProps {
   curTheme: string;
   itemKey: number;
 }
 
 function Card(this: any, { curTheme, itemKey }: CardProps) {
   // Card Content from JSON file
-  const studentFeatures = data.find(obj => obj.student)?.student.features ?? [];
-  const engineerFeatures = data.find(obj => obj.engineer)?.engineer.features ?? [];
+  const studentFeatures =
+    data.find((obj) => obj.student)?.student.features ?? [];
+  const engineerFeatures =
+    data.find((obj) => obj.engineer)?.engineer.features ?? [];
 
   const studentTitle = studentFeatures[itemKey]?.title;
   const studentDescription = studentFeatures[itemKey]?.description;
@@ -19,16 +23,25 @@ function Card(this: any, { curTheme, itemKey }: CardProps) {
   const engineerDescription = engineerFeatures[itemKey]?.description;
 
   return (
-  <>
-    <div className={"flex w-96 gap-x-5  px-6 py-3 border rounded-lg shadow-md bg-blue-400/10 scale-up-bottom fade-in"}>
-      <img style={{ maxHeight: "48px" }} src={icon} alt=""/>
-      <div className="flex flex-col">
-        <h3 className="font-bold text-lg">{curTheme==="student" ? studentTitle : engineerTitle}</h3>
-        <p className="text-slate-300">{curTheme==="student" ? studentDescription : engineerDescription}</p>
+    <>
+      <div
+        className={
+          "flex w-96 gap-x-5  px-6 py-3 border rounded-lg shadow-md bg-blue-400/10 scale-up-bottom fade-in"
+        }
+      >
+        <FontAwesomeIcon icon={faEnvelope} />
+
+        <div className="flex flex-col">
+          <h3 className="font-bold text-lg">
+            {curTheme === "student" ? studentTitle : engineerTitle}
+          </h3>
+          <p className="text-slate-300">
+            {curTheme === "student" ? studentDescription : engineerDescription}
+          </p>
+        </div>
       </div>
-    </div>
-  </>
-  )
+    </>
+  );
 }
 
-export default Card
+export default Card;
